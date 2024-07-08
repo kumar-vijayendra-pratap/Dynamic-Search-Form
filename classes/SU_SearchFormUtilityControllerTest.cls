@@ -13,7 +13,7 @@ public class SU_SearchFormUtilityControllerTest {
     @isTest
     static void testGetMetadataRecords() {
         // Call the getMetadataRecords method
-        List<SU_Search_Entity__mdt> result = SU_SearchFormUtilityController.getMetadataRecords('Test Search');
+        List<SU_Search_Entity__mdt> result = SU_SearchFormUtilityController.getMetadataRecords('Search Feature');
         
         // Verify that the method returns the expected number of records
         System.assertNotEquals(0, result.size(), 'Expected Metadata Records');
