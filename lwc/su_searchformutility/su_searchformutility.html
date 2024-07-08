@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title={title} icon-name="utility:search">
+        <lightning-record-edit-form>
+            <div class="slds-grid slds-wrap">
+                <template for:each={fields} for:item="field">
+                    <lightning-layout-item key={field.Id} class="slds-size_1-of-4">
+                        <div class="slds-grid slds-wrap">
+                            <!-- Text Placeholder -->
+                            <template if:true={field.isText}>
+                                <lightning-input 
+                                name={field.SU_Api_Name__c}
+                                label={field.SU_Label__c} 
+                                data-field={field.Label}
+                                required={field.SU_Required__c}
+                                value={inputValue} class="slds-m-around_x-small"></lightning-input>
+                            </template>
+                            <!-- Dropdown Placeholder -->
+                            <template if:true={field.isDropdown}>
+                                <lightning-combobox 
+                                name={field.SU_Api_Name__c} 
+                                label={field.SU_Label__c}
+                                data-field={field.Label}
+                                required={field.SU_Required__c} 
+                                options={field.Options}
+                                value={selectedValue} class="slds-m-around_x-small"></lightning-combobox>
+                            </template>
+                        </div>
+                    </lightning-layout-item>
+                </template>
+            </div>
+            <div class="slds-m-top_small slds-m-bottom_medium slds-align_absolute-center">
+                <lightning-button title="Execute Search" label="Search" onclick={searchData} class="slds-m-left_x-small"></lightning-button>
+                <lightning-button title="Reset Search" label="Reset" onclick={reset} class="slds-m-left_x-small"></lightning-button>
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

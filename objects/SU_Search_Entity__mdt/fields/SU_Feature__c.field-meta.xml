@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SU_Feature__c</fullName>
+    <description>Feature in which this property will be used</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Feature in which this property will be used</inlineHelpText>
+    <label>Feature</label>
+    <required>true</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Re-Org Search</fullName>
+                <default>true</default>
+                <label>Re-Org Search</label>
+            </value>
+            <value>
+                <fullName>Transfer-In Search</fullName>
+                <default>false</default>
+                <label>Transfer-In Search</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SU_Options__c</fullName>
+    <description>Dropdown Options</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Dropdown Options. Populate only if Type is picklist/dropdown. (separate values using &apos;;&apos; as a separator)</inlineHelpText>
+    <label>Options</label>
+    <length>32768</length>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>
